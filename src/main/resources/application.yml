@@ -1,0 +1,2 @@
+#cors:
+  #originPatterns: ${CORS_ORIGINS}
