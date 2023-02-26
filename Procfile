@@ -1,1 +1,1 @@
-web: java -jar target/github.jar
+web: java -jar target/github-project-list.jar
