@@ -20,6 +20,14 @@ class GitHubRepoController(private val repoService: GithubRepoService) {
         return repoService.getRepositoryById(username, id)
     }
 
+    @GetMapping("/repos/{username}/n")
+    suspend fun getRepositoryByName(
+        @PathVariable username: String,
+        @RequestParam name: String,
+    ): ResponseEntity<List<GitHubDTO>> {
+        return ResponseEntity.ok(listOf(repoService.getRepositoryByName(username, name)))
+    }
+
     @GetMapping("/repos/{username}/c")
     suspend fun getRepositoriesByCount(
         @PathVariable username: String,
