@@ -1,6 +1,7 @@
 package com.backend.github.service
 
 import com.backend.github.dto.GitHubDTO
+import com.backend.github.exception.CustomExceptionHandler
 import org.kohsuke.github.GitHub
 import org.kohsuke.github.GitHubBuilder
 import org.springframework.stereotype.Service
